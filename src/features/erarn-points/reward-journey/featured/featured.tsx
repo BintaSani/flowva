@@ -20,7 +20,7 @@ const Featured = () => {
               Top Tool Spotlight
             </h3>{" "}
             <div className="overflow-hidden relative rounded-full size-10 md:size-16">
-              <img src="/src/assets/featured.webp" />
+              <img src="/featured.webp" />
             </div>
           </div>
           <p className="text-lg text-left">
