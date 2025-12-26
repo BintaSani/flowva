@@ -6,20 +6,21 @@ import type { Connect } from "vite";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: process.env.VITE_BASE_PATH || "./flowva",
   plugins: [
     react(),
     tailwindcss(),
-    {
-      name: "spa-fallback",
-      configureServer(server) {
-        // explicitly cast to the type Connect.NextHandleFunction
-        const middleware = history({
-          index: "/index.html",
-          htmlAcceptHeaders: ["text/html", "application/xhtml+xml"],
-        }) as unknown as Connect.NextHandleFunction;
+    // {
+    //   name: "spa-fallback",
+    //   configureServer(server) {
+    //     // explicitly cast to the type Connect.NextHandleFunction
+    //     const middleware = history({
+    //       index: "/index.html",
+    //       htmlAcceptHeaders: ["text/html", "application/xhtml+xml"],
+    //     }) as unknown as Connect.NextHandleFunction;
 
-        server.middlewares.use(middleware);
-      },
-    },
+    //     server.middlewares.use(middleware);
+    //   },
+    // },
   ],
 });
