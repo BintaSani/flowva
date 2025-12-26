@@ -34,7 +34,7 @@ const AuthCallback = () => {
           return;
         }
 
-        if (profile?.name) {
+        if (profile?.name === null || profile?.name === "") {
           // Name not set -> onboarding
           navigate("/onboarding", { replace: true });
         } else {
@@ -52,9 +52,10 @@ const AuthCallback = () => {
   return (
     <div className="flex justify-center items-center h-screen flex-col">
       <img
+        loading="eager"
         src="/src/assets/logo.webp"
         alt="Flowva Logo"
-        className="w-12 animate-pulse"
+        className=" animate-pulse max-w-50"
       />
       <p className="text-black mt-2">Redirecting...</p>
     </div>

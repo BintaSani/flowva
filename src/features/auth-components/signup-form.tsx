@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 const SignupForm = () => {
   const supabase = createClient();
-  // const [loading, setLoading] = useState<boolean>(false);
   const [referralCode, setReferralCode] = useState<string | null>(null);
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const navigate = useNavigate();
@@ -30,6 +29,7 @@ const SignupForm = () => {
     const params = new URLSearchParams(window.location.search);
     const ref = params.get("ref");
     if (ref) setReferralCode(ref);
+    localStorage.setItem("referrer_code", ref || "");
   }, []);
 
   const handleSignup = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -71,9 +71,6 @@ const SignupForm = () => {
       provider: "google",
       options: {
         redirectTo: `${window.location.origin}`,
-        queryParams: {
-          referrer_code: referralCode || "",
-        },
       },
     });
     if (error) {

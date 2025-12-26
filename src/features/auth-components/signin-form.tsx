@@ -27,7 +27,7 @@ const SigninForm = () => {
       password: signinForm.password,
     });
     setSigninForm({ email: "", password: "" });
-    navigate("/dashboard/earn-rewards");
+    navigate("/callback", { replace: true });
 
     if (error) {
       setMessage({
@@ -44,7 +44,7 @@ const SigninForm = () => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: `${window.location.origin}/dashboard/earn-rewards`,
+        redirectTo: `${window.location.origin}/callback`,
       },
     });
     if (error) {

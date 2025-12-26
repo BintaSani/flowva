@@ -91,7 +91,7 @@ const ReferAndEarn = () => {
                   className="absolute right-[10px] top-1/2 -translate-y-1/2 cursor-pointer z-10"
                 >
                   {copied ? (
-                    <LuCheck className="size-6 text-[#9013fe]" />
+                    <LuCheck className="size-6 text-[#13fe5a]" />
                   ) : (
                     <LuCopy className="size-6 text-[#9013fe]" />
                   )}

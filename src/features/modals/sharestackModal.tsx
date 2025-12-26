@@ -3,16 +3,14 @@ import { IoMdClose } from "react-icons/io";
 
 const ShareStackModal = ({ onClose }: { onClose: () => void }) => {
   return (
-    <div className="fixed top-0 left-0 bg-black/25 h-full w-full z-50">
+    <div className="fixed top-0 left-0 bg-black/25 h-full w-full z-101">
       <div className="flex items-center justify-center h-full">
         <div
           role="dialog"
           aria-modal="true"
-          className="bg-white max-w-95 p-1.25 w-full top-5 transform origin-[389.5px_453px] px-6 scale-110 m-auto rounded-lg"
+          className="max-w-95 relative transform origin-[389.5px_453px] bg-white rounded-lg top-5 m-auto py-5 px-6 w-full"
         >
-          <div
-          // style="outline: none;"
-          >
+          <div className="">
             <div className="">
               <button
                 type="button"
@@ -24,7 +22,6 @@ const ShareStackModal = ({ onClose }: { onClose: () => void }) => {
                   <IoMdClose className="size-5 text-[#00000073] group-hover:text-gray-800" />
                 </span>
               </button>
-
               <div className=" py-5 px-6">
                 <div className="text-center">
                   <h2 className="text-2xl font-bold mb-4 text-black">
@@ -44,10 +41,7 @@ const ShareStackModal = ({ onClose }: { onClose: () => void }) => {
               </div>
             </div>
           </div>
-          <div
-          // tabindex="0"
-          // style="width: 0px; height: 0px; overflow: hidden; outline: none;"
-          ></div>
+          <div className="width: 0px; height: 0px; overflow: hidden; outline: none;"></div>
         </div>
       </div>
     </div>

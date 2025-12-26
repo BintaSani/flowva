@@ -11,10 +11,12 @@ import { IoMdClose } from "react-icons/io";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router";
 import { useToggle } from "../../context/toggleContext";
+import { useAuth } from "../../context/authContext";
 
 const Sidebar = () => {
   const location = useLocation();
   const { toggle } = useToggle();
+  const { profile } = useAuth();
 
   return (
     <div className="flex flex-col h-full relative">
@@ -124,9 +126,11 @@ const Sidebar = () => {
               />
             </div>
             <div className="text-start">
-              <span className="text-[0.9rem] font-semibold">Binta</span>
+              <span className="text-[0.9rem] font-semibold">
+                {profile?.name}
+              </span>
               <p className="text-[0.8rem] text-[#718096] truncate overflow-x-hidden max-w-38.25">
-                bintasani992@gmail.com
+                {profile?.email}
               </p>
             </div>
           </button>
