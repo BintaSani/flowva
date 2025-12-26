@@ -53,7 +53,7 @@ const AuthCallback = () => {
     <div className="flex justify-center items-center h-screen flex-col">
       <img
         loading="eager"
-        src="/src/assets/logo.webp"
+        src="/logo.webp"
         alt="Flowva Logo"
         className=" animate-pulse max-w-50"
       />

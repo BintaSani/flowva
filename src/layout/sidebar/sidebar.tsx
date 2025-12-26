@@ -32,7 +32,7 @@ const Sidebar = () => {
       </button>
       <div className=" p-2 px-7  my-2 flex justify-start">
         <img
-          src="/src/assets/logo.webp"
+          src="/logo.webp"
           loading="eager"
           alt="Flowva Logo"
           className="h-15"
