@@ -3,7 +3,7 @@ import { LuCloudDownload } from "react-icons/lu";
 
 const ClaimModal = ({ onClose }: { onClose: () => void }) => {
   return (
-    <div className="fixed top-0 left-0 bg-black/25 h-full w-full z-50">
+    <div className="fixed top-0 left-0 bg-black/25 h-full w-full z-101">
       <div className="flex items-center justify-center h-full">
         <div
           role="dialog"
