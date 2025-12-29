@@ -20,13 +20,13 @@ const RedeemPoints = () => {
         <div
           role="tablist"
           aria-orientation="horizontal"
-          className="flex gap-1 relative w-fit mb-4"
+          className="flex gap-1 relative w-fit overflow-x-auto mb-4 whitespace-nowrap"
         >
           {/* All Rewards */}
           <button
             role="tab"
             aria-selected={activeTab === "all rewards"}
-            className={` p-3 text-base font-medium transition-colors rounded-t-lg
+            className={` p-3 text-base  font-medium transition-colors rounded-t-lg
               ${
                 activeTab === "all rewards"
                   ? "text-[#9013fe] bg-[#9013fe0d] rounded-t-lg"

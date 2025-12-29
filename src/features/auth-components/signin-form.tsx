@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 const SigninForm = () => {
   const supabase = createClient();
   const navigate = useNavigate();
-  // const [loading, setLoading] = useState<boolean>(false);
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [message, setMessage] = useState<{
     message: string;

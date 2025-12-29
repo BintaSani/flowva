@@ -3,9 +3,10 @@ import { useAuth } from "../../../../context/authContext";
 
 const PointsBalance = () => {
   const { profile } = useAuth();
-  const progress = profile?.total_points
+  let progress = profile?.total_points
     ? (profile.total_points / 5000) * 100
     : 0;
+
   return (
     <div className="shadow-[0_5px_15px_rgba(0,0,0,0.05)] transition-all rounded-2xl hover:-translate-y-1.25 hover:shadow-[0_10px_25px_rgba(0,0,0,0.1)] border border-[#f3f4f6] overflow-hidden duration-200">
       <div className="p-4 relative border border-b-[#f3f4f6] bg-[#eef2ff] border-t-0 border-r-0 border-l-0">
@@ -288,7 +289,7 @@ const PointsBalance = () => {
             <div
               className="h-full bg-linear-to-br from-[#9013fe] to-[#FF9FF5] rounded-full transition-[width] duration-500 ease-in-out"
               style={{
-                width: `${progress}`,
+                width: `${progress}%`,
               }}
             ></div>
           </div>

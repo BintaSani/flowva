@@ -8,8 +8,6 @@ const DAYS = ["M", "T", "W", "T", "F", "S", "S"];
 
 const DailyStreak = () => {
   const [streak, setStreak] = useState<any | null>(null);
-  // const [loading, setLoading] = useState<boolean>(true);
-  // const [error, setError] = useState<string | null>(null);
   const [loadClaim, setloadClaim] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<boolean>(false);
 
@@ -24,8 +22,6 @@ const DailyStreak = () => {
         } = await supabase.auth.getUser();
 
         if (!user) {
-          // setError("No authenticated user found.");
-          // setLoading(false);
           return;
         }
 
@@ -44,9 +40,6 @@ const DailyStreak = () => {
         console.error(err);
         // setError(err.message);
       }
-      // finally {
-      //   setLoading(false);
-      // }
     };
 
     fetchUserStreak();

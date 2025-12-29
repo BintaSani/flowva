@@ -22,13 +22,9 @@ const ReferAndEarn = () => {
   const handleCopy = async () => {
     if (!referralLink) return;
 
-    try {
-      await navigator.clipboard.writeText(referralLink);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1500);
-    } catch {
-      // optional: toast or fallback
-    }
+    await navigator.clipboard.writeText(referralLink);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500);
   };
 
   return (
